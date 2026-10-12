@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Grupo ABAN</title>
+  <meta name="description" content="Escríbenos y un asesor de Grupo ABAN te responderá a la brevedad.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Grupo ABAN</a>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="nav-link">Cursos</a>
+        <a href="agendar-sesion.html" class="nav-link">Agendar Sesión</a>
+        <a href="nosotros.html" class="nav-link">Nosotros</a>
+        <a href="contacto.html" class="nav-link active">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <a href="http://localhost:8080/login/index.php" class="btn btn-outlined-inverse">Login</a>
+        <a href="http://localhost:8080/course/index.php" class="btn btn-secondary">Ver Cursos</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Contáctanos</h1>
+        <p>Envíanos tu mensaje y lo recibiremos directamente en soporte.aban@gmail.com. Te responderemos lo antes posible.</p>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <div class="container form-grid">
+        <form class="card-form ajax-form" data-endpoint="/enviar-contacto" data-tipo="Contacto">
+          <div class="form-row">
+            <div class="field">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="field">
+              <label for="correo">Correo electrónico</label>
+              <input type="email" id="correo" name="correo" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="telefono">Teléfono (opcional)</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="938 000 00 00">
+            </div>
+            <div class="field">
+              <label for="asunto">Asunto</label>
+              <select id="asunto" name="asunto">
+                <option>Información de cursos</option>
+                <option>Gestoría Aeronáutica</option>
+                <option>Pruebas No Destructivas</option>
+                <option>Otro</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos en qué podemos ayudarte."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-secondary btn-lg btn-block">Enviar mensaje</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <aside class="side-info">
+          <div class="info-card">
+            <h3>Encuéntranos</h3>
+            <p>Calle 25 No. 44 entre 36 y 36c, Col. Guadalupe<br>C.P. 24178, Ciudad del Carmen, Campeche</p>
+          </div>
+          <div class="info-card">
+            <h3>Correo</h3>
+            <a href="mailto:soporte.aban@gmail.com" class="footer-icon-link dark">soporte.aban@gmail.com</a>
+          </div>
+          <div class="info-card">
+            <h3>Teléfono</h3>
+            <a href="tel:+529381444797" class="footer-icon-link dark">938 144 47 97</a>
+          </div>
+        </aside>
+      </div>
+
+      <div class="container">
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d945.1449915260207!2d-91.82977144518743!3d18.63795302303628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85f1078bd6856063%3A0x1b064a5501b4f532!2sCalle+25+44%2C+Guadalupe%2C+24100+Cd+del+Carmen%2C+Camp.!5e0!3m2!1ses-419!2smx!4v1509725388224"
+            width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Grupo ABAN">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <p class="footer-logo">Grupo ABAN</p>
+        <p>Capacitación profesional para el mundo actual.</p>
+        <p class="footer-copy">© 2026 Grupo ABAN. Todos los derechos reservados.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Enlaces Rápidos</h4>
+        <a href="index.html">Cursos</a>
+        <a href="http://localhost:8080">Moodle (cursos.aban.com)</a>
+        <a href="agendar-sesion.html">Agendar Sesión</a>
+        <a href="nosotros.html">Nosotros</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Aviso de Privacidad</a>
+        <a href="#">Términos y Condiciones</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="mailto:soporte.aban@gmail.com" class="footer-icon-link">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="m2 6 10 7L22 6" stroke="currentColor" stroke-width="2"/></svg>
+          soporte.aban@gmail.com
+        </a>
+        <a href="contacto.html" class="footer-icon-link">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z" stroke="currentColor" stroke-width="2"/></svg>
+          Ir a Contacto
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

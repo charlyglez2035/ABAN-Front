@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendar Sesión | Grupo ABAN</title>
+  <meta name="description" content="Agenda una sesión con un asesor de Grupo ABAN y resuelve tus dudas sobre nuestros cursos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Grupo ABAN</a>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="nav-link">Cursos</a>
+        <a href="agendar-sesion.html" class="nav-link active">Agendar Sesión</a>
+        <a href="nosotros.html" class="nav-link">Nosotros</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <a href="http://localhost:8080/login/index.php" class="btn btn-outlined-inverse">Login</a>
+        <a href="http://localhost:8080/course/index.php" class="btn btn-secondary">Ver Cursos</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Agenda una Sesión con un Asesor</h1>
+        <p>Cuéntanos qué curso te interesa y en qué horario prefieres que te contactemos. Un asesor de Grupo ABAN te confirmará por correo o teléfono.</p>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <div class="container form-grid">
+        <form class="card-form ajax-form" data-endpoint="/enviar-contacto" data-tipo="Agendar Sesión">
+          <div class="form-row">
+            <div class="field">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="field">
+              <label for="correo">Correo electrónico</label>
+              <input type="email" id="correo" name="correo" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="938 000 00 00">
+            </div>
+            <div class="field">
+              <label for="curso">Curso de interés</label>
+              <select id="curso" name="curso">
+                <option>Formación de Inspectores Aeronáuticos</option>
+                <option>Prácticas Estándar para Aeronave y Motor</option>
+                <option>Partículas Magnéticas</option>
+                <option>Aún no lo sé, quiero orientación</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="fecha">Fecha preferida</label>
+              <input type="date" id="fecha" name="fecha">
+            </div>
+            <div class="field">
+              <label for="horario">Horario preferido</label>
+              <select id="horario" name="horario">
+                <option>Mañana (9:00 - 12:00)</option>
+                <option>Tarde (12:00 - 17:00)</option>
+                <option>Noche (17:00 - 20:00)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="mensaje">Comentarios (opcional)</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos brevemente qué necesitas."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-secondary btn-lg btn-block">Agendar mi sesión</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <aside class="side-info">
+          <div class="info-card">
+            <h3>¿Cómo funciona?</h3>
+            <ol class="steps-list">
+              <li>Llenas el formulario con tus datos y disponibilidad.</li>
+              <li>Un asesor revisa tu solicitud y te contacta por correo o teléfono.</li>
+              <li>Confirmamos día y hora, y te enviamos el enlace de la sesión.</li>
+            </ol>
+          </div>
+          <div class="info-card">
+            <h3>Contacto directo</h3>
+            <p>¿Prefieres escribirnos tú mismo?</p>
+            <a href="mailto:soporte.aban@gmail.com" class="footer-icon-link dark">soporte.aban@gmail.com</a>
+            <a href="tel:+529381444797" class="footer-icon-link dark">938 144 47 97</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <p class="footer-logo">Grupo ABAN</p>
+        <p>Capacitación profesional para el mundo actual.</p>
+        <p class="footer-copy">© 2026 Grupo ABAN. Todos los derechos reservados.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Enlaces Rápidos</h4>
+        <a href="index.html">Cursos</a>
+        <a href="http://localhost:8080">Moodle (cursos.aban.com)</a>
+        <a href="agendar-sesion.html">Agendar Sesión</a>
+        <a href="nosotros.html">Nosotros</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Aviso de Privacidad</a>
+        <a href="#">Términos y Condiciones</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="mailto:soporte.aban@gmail.com" class="footer-icon-link">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="m2 6 10 7L22 6" stroke="currentColor" stroke-width="2"/></svg>
+          soporte.aban@gmail.com
+        </a>
+        <a href="contacto.html" class="footer-icon-link">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z" stroke="currentColor" stroke-width="2"/></svg>
+          Ir a Contacto
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

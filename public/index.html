@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grupo ABAN | Capacitación Profesional Aeronáutica</title>
+  <meta name="description" content="Cursos de capacitación aeronáutica con acceso 24/7, instructores certificados y sesiones en vivo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Grupo ABAN</a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="nav-link active">Cursos</a>
+        <a href="agendar-sesion.html" class="nav-link">Agendar Sesión</a>
+        <a href="nosotros.html" class="nav-link">Nosotros</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="http://localhost:8080/login/index.php" class="btn btn-outlined-inverse">Login</a>
+        <a href="http://localhost:8080/course/index.php" class="btn btn-secondary">Ver Cursos</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Capacitación Profesional Flexible con Acceso 24/7</h1>
+          <p class="lead">
+            Llevamos la excelencia de la capacitación presencial al entorno virtual.
+            Accede a nuestros programas de formación cuando quieras y donde quieras.
+          </p>
+          <a href="http://localhost:8080/course/index.php" class="btn btn-secondary btn-lg">Explorar Catálogo de Cursos</a>
+        </div>
+        <div class="hero-media">
+          <img src="https://picsum.photos/seed/aban-hangar/900/700" alt="Instructor de Grupo ABAN en hangar de mantenimiento aeronáutico" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <div class="container"><hr class="divider"></div>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="features">
+      <div class="container features-grid">
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+          <h3>Acceso 24/7</h3>
+          <p>Estudia a tu propio ritmo. Nuestra plataforma Moodle está siempre disponible para ti.</p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3 2 8l10 5 10-5-10-5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5" stroke="currentColor" stroke-width="2"/></svg>
+          </span>
+          <h3>Instructores certificados</h3>
+          <p>Aprende de expertos de la industria con años de experiencia práctica y docente.</p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="6" width="14" height="12" rx="2" stroke="currentColor" stroke-width="2"/><path d="m16 10 6-3v10l-6-3" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Sesiones mixtas</h3>
+          <p>Combina el aprendizaje asíncrono con sesiones en vivo vía Zoom para resolver dudas.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== CURSOS DESTACADOS ===== -->
+    <section class="courses" id="cursos-destacados">
+      <div class="container">
+        <h2 class="section-title">Cursos Destacados</h2>
+        <p class="section-subtitle">Cada curso se imparte en nuestra plataforma Moodle. Al dar clic en "Ver más" entrarás directo a la ficha del curso.</p>
+
+        <div class="courses-grid">
+          <article class="course-card">
+            <div class="course-media">
+              <img src="https://picsum.photos/seed/aban-inspectores/700/440" alt="Inspectores aeronáuticos revisando motor de aeronave" loading="lazy">
+              <span class="badge badge-blue">DGAC</span>
+            </div>
+            <div class="course-body">
+              <h3>Formación de Inspectores Aeronáuticos</h3>
+              <p>Domina la capacitación de tripulaciones y sistemas de gestión de seguridad.</p>
+              <a href="http://localhost:8080/course/view.php?id=1" class="btn btn-outlined btn-block">Ver más</a>
+            </div>
+          </article>
+
+          <article class="course-card">
+            <div class="course-media">
+              <img src="https://picsum.photos/seed/aban-practicas/700/440" alt="Técnico revisando manual de mantenimiento de motor" loading="lazy">
+              <span class="badge badge-blue">STPS</span>
+            </div>
+            <div class="course-body">
+              <h3>Prácticas Estándar para Aeronave y Motor</h3>
+              <p>Manejo de manuales de mantenimiento y de reactores de acuerdo al marco normativo.</p>
+              <a href="http://localhost:8080/course/view.php?id=2" class="btn btn-outlined btn-block">Ver más</a>
+            </div>
+          </article>
+
+          <article class="course-card">
+            <div class="course-media">
+              <img src="https://picsum.photos/seed/aban-particulas/700/440" alt="Inspección por partículas magnéticas en taller aeronáutico" loading="lazy">
+              <span class="badge badge-blue">ASTN</span>
+            </div>
+            <div class="course-body">
+              <h3>Partículas Magnéticas</h3>
+              <p>Teoría de magnetismo y aplicación de la corriente en las partículas magnéticas para su proceso de inspección.</p>
+              <a href="http://localhost:8080/course/view.php?id=3" class="btn btn-outlined btn-block">Ver más</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA REGISTRO ===== -->
+    <section class="cta">
+      <div class="container cta-content">
+        <h2>Regístrate y comienza a aprender hoy</h2>
+        <p>Únete a cientos de profesionales que ya están avanzando en sus carreras con Grupo ABAN.</p>
+        <a href="http://localhost:8080/login/signup.php" class="btn btn-secondary btn-lg">Crear Cuenta</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <p class="footer-logo">Grupo ABAN</p>
+        <p>Capacitación profesional para el mundo actual.</p>
+        <p class="footer-copy">© 2026 Grupo ABAN. Todos los derechos reservados.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Enlaces Rápidos</h4>
+        <a href="index.html">Cursos</a>
+        <a href="http://localhost:8080">Moodle (cursos.aban.com)</a>
+        <a href="agendar-sesion.html">Agendar Sesión</a>
+        <a href="nosotros.html">Nosotros</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Aviso de Privacidad</a>
+        <a href="#">Términos y Condiciones</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="mailto:soporte.aban@gmail.com" class="footer-icon-link">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="m2 6 10 7L22 6" stroke="currentColor" stroke-width="2"/></svg>
+          soporte.aban@gmail.com
+        </a>
+        <a href="contacto.html" class="footer-icon-link">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z" stroke="currentColor" stroke-width="2"/></svg>
+          Ir a Contacto
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
