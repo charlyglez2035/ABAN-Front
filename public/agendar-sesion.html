@@ -8,13 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/marca/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/marca/apple-touch-icon.png">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">Grupo ABAN</a>
+      <a href="index.html" class="logo" aria-label="Grupo ABAN, ir al inicio"><img src="assets/images/marca/logo-emblema.png" alt="" width="110" height="52"><span>Grupo ABAN</span></a>
       <nav class="main-nav" id="mainNav">
         <a href="index.html" class="nav-link">Cursos</a>
         <a href="agendar-sesion.html" class="nav-link active">Agendar Sesión</a>
@@ -61,10 +64,32 @@
             <div class="field">
               <label for="curso">Curso de interés</label>
               <select id="curso" name="curso">
-                <option>Formación de Inspectores Aeronáuticos</option>
-                <option>Prácticas Estándar para Aeronave y Motor</option>
-                <option>Partículas Magnéticas</option>
                 <option>Aún no lo sé, quiero orientación</option>
+                <optgroup label="Bloque 1 · Mantenimiento e inspección">
+                  <option>Administración del Mantenimiento Aéreo</option>
+                  <option>Factores Humanos</option>
+                  <option>Formación de Inspectores Aeronáuticos</option>
+                  <option>Prácticas Estándar para Aeronave y Motor</option>
+                  <option>Pruebas No Destructivas</option>
+                  <option>Partículas Magnéticas</option>
+                </optgroup>
+                <optgroup label="Bloque 2 · Calidad, normatividad y metrología">
+                  <option>Formación de Auditores de Sistemas de Calidad</option>
+                  <option>Inducción a los Sistemas de Calidad</option>
+                  <option>Legislación Aeronáutica</option>
+                  <option>Manejo de Combustibles para Aviación</option>
+                  <option>Metrología en Aeronáutica</option>
+                  <option>Metrología en Aeronáutica II (Cálculo de Incertidumbre)</option>
+                  <option>Tecnología de Materiales</option>
+                </optgroup>
+                <optgroup label="Bloque 3 · Especialidades técnicas">
+                  <option>EWIS (Electrical Wiring Interconnection Systems)</option>
+                  <option>Inspecciones Boroscópicas</option>
+                  <option>Inspecciones RII</option>
+                  <option>Prácticas Estándar en Reparaciones Estructurales</option>
+                  <option>Separación Vertical Mínima Reducida Nivel I</option>
+                  <option>Tratamiento Anticorrosivo</option>
+                </optgroup>
               </select>
             </div>
           </div>
@@ -109,6 +134,52 @@
             <a href="tel:+529381444797" class="footer-icon-link dark">938 144 47 97</a>
           </div>
         </aside>
+      </div>
+    </section>
+
+    <section class="policies" id="politicas">
+      <div class="container">
+        <h2 class="section-title">Políticas de Curso</h2>
+        <p class="section-subtitle">Lo que necesitas saber antes de inscribirte: cómo reservar tu lugar, cómo pagar y qué pasa si necesitas cancelar.</p>
+
+        <div class="policies-grid">
+          <article class="service-card">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M6 3h9l4 4v14H6V3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12h7M9 16h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Solicitud de curso</h3>
+            <p>Envía por correo la solicitud de inscripción con anticipación para reservar tu fecha. El curso puede tomarse en nuestras instalaciones o, si te conviene más, el instructor se traslada a tu sede cubriendo sus viáticos.</p>
+            <a href="assets/docs/solicitud-de-curso.pdf" target="_blank" rel="noopener" class="btn btn-outlined btn-sm">Descargar solicitud (PDF)</a>
+          </article>
+
+          <article class="service-card">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M2 10h20M6 15h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Forma de pago</h3>
+            <p>Tu fecha queda confirmada con el 50% del pago al inscribirte; el 50% restante se cubre a más tardar un día antes del inicio del curso. Un asesor te compartirá los datos para el depósito y deberás enviarnos tu comprobante.</p>
+          </article>
+
+          <article class="service-card policy-wide">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Cancelaciones y reprogramaciones</h3>
+            <p>Debemos recibir por escrito la notificación de cancelación. El reembolso se realiza de acuerdo con la siguiente tabla:</p>
+            <table class="policy-table">
+              <thead>
+                <tr><th>Cancelación / reprogramación</th><th>Reembolso</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Cancelado por Grupo ABAN en cualquier momento</td><td>100%</td></tr>
+                <tr><td>10 o más días hábiles antes de la fecha de inicio</td><td>100%</td></tr>
+                <tr><td>De 5 a 9 días hábiles antes de la fecha de inicio</td><td>50%</td></tr>
+                <tr><td>De 1 a 4 días hábiles antes de la fecha de inicio</td><td>0%</td></tr>
+              </tbody>
+            </table>
+            <p class="policy-note">Las notificaciones deben recibirse a más tardar a las 17:00 h del viernes previo a la fecha correspondiente.</p>
+          </article>
+        </div>
       </div>
     </section>
   </main>

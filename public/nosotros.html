@@ -8,13 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/marca/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/marca/apple-touch-icon.png">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">Grupo ABAN</a>
+      <a href="index.html" class="logo" aria-label="Grupo ABAN, ir al inicio"><img src="assets/images/marca/logo-emblema.png" alt="" width="110" height="52"><span>Grupo ABAN</span></a>
       <nav class="main-nav" id="mainNav">
         <a href="index.html" class="nav-link">Cursos</a>
         <a href="agendar-sesion.html" class="nav-link">Agendar Sesión</a>
@@ -41,7 +44,7 @@
 
     <section class="about-grid-section">
       <div class="container about-grid">
-        <img src="https://picsum.photos/seed/aban-nosotros/900/700" alt="Equipo de Grupo ABAN trabajando en mantenimiento de aeronaves" class="about-image" loading="lazy">
+        <img src="assets/images/capacitaciones/grupo-asnt-ndt-nivel-ii.jpg" alt="Generación del curso ASNT NDT Nivel II de Grupo ABAN" class="about-image" loading="lazy">
         <div class="about-copy">
           <h2>Quiénes somos</h2>
           <p>Somos un equipo mexicano especializado en el sector aeronáutico, con presencia en Ciudad del Carmen, Campeche. Trabajamos junto a talleres de mantenimiento, aerolíneas y autoridades para que cada proceso cumpla con la normativa vigente, sin perder de vista la formación continua del personal técnico.</p>
@@ -53,7 +56,7 @@
     <section class="services">
       <div class="container">
         <h2 class="section-title">Nuestros Servicios</h2>
-        <p class="section-subtitle">Tres áreas que cubren todo el ciclo: documentación, inspección y desarrollo del talento humano.</p>
+        <p class="section-subtitle">Cuatro áreas que cubren todo el ciclo: documentación, inspección, medición y desarrollo del talento humano.</p>
 
         <div class="services-grid">
           <article class="service-card">
@@ -74,11 +77,53 @@
 
           <article class="service-card">
             <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 16a8 8 0 1 1 16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="m12 16 4-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M3 20h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Calibración de Equipos</h3>
+            <p>Calibración de instrumentos de medición y prueba para asegurar la confiabilidad de cada inspección.</p>
+          </article>
+
+          <article class="service-card">
+            <span class="feature-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M12 3 2 8l10 5 10-5-10-5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5" stroke="currentColor" stroke-width="2"/></svg>
             </span>
             <h3>Capacitación</h3>
             <p>Cursos de vital importancia para tu desarrollo profesional en el ámbito aeronáutico, presenciales y en línea.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <div class="container">
+        <h2 class="section-title">Nuestras Capacitaciones</h2>
+        <p class="section-subtitle">Teoría en aula y práctica con equipo real: así se viven los cursos de Grupo ABAN.</p>
+
+        <div class="gallery-grid">
+          <figure>
+            <img src="assets/images/capacitaciones/grupo-nivel-ii-penetrantes.jpg" alt="Generación del curso Nivel II NDT de líquidos penetrantes" loading="lazy">
+            <figcaption>Generación Nivel II · Líquidos penetrantes</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/capacitaciones/practica-penetrantes-1.jpg" alt="Alumnos aplicando líquidos penetrantes sobre probetas" loading="lazy">
+            <figcaption>Práctica de aplicación de penetrantes</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/capacitaciones/inspeccion-uv-2.jpg" alt="Indicaciones fluorescentes sobre una pieza bajo luz ultravioleta" loading="lazy">
+            <figcaption>Inspección con luz ultravioleta</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/capacitaciones/indicacion-soldadura-1.jpg" alt="Indicación roja de discontinuidad en un cordón de soldadura" loading="lazy">
+            <figcaption>Evaluación de indicaciones en soldadura</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/capacitaciones/practica-inspeccion-grupo.jpg" alt="Instructor y alumnos revisando probetas en el aula" loading="lazy">
+            <figcaption>Práctica guiada por el instructor</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/capacitaciones/examen-teorico-1.jpg" alt="Alumnos resolviendo el examen teórico en el aula" loading="lazy">
+            <figcaption>Evaluación teórica</figcaption>
+          </figure>
         </div>
       </div>
     </section>

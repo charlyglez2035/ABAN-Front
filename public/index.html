@@ -8,6 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/marca/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/marca/apple-touch-icon.png">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -15,7 +18,7 @@
   <!-- ===== HEADER ===== -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">Grupo ABAN</a>
+      <a href="index.html" class="logo" aria-label="Grupo ABAN, ir al inicio"><img src="assets/images/marca/logo-emblema.png" alt="" width="110" height="52"><span>Grupo ABAN</span></a>
 
       <nav class="main-nav" id="mainNav">
         <a href="index.html" class="nav-link active">Cursos</a>
@@ -45,10 +48,10 @@
             Llevamos la excelencia de la capacitación presencial al entorno virtual.
             Accede a nuestros programas de formación cuando quieras y donde quieras.
           </p>
-          <a href="http://localhost:8080/course/index.php" class="btn btn-secondary btn-lg">Explorar Catálogo de Cursos</a>
+          <a href="#catalogo" class="btn btn-secondary btn-lg">Explorar Catálogo de Cursos</a>
         </div>
         <div class="hero-media">
-          <img src="https://picsum.photos/seed/aban-hangar/900/700" alt="Instructor de Grupo ABAN en hangar de mantenimiento aeronáutico" loading="lazy">
+          <img src="assets/images/capacitaciones/practica-penetrantes-2.jpg" alt="Alumnos de Grupo ABAN durante una práctica de inspección por líquidos penetrantes">
         </div>
       </div>
     </section>
@@ -88,44 +91,343 @@
     <section class="courses" id="cursos-destacados">
       <div class="container">
         <h2 class="section-title">Cursos Destacados</h2>
-        <p class="section-subtitle">Cada curso se imparte en nuestra plataforma Moodle. Al dar clic en "Ver más" entrarás directo a la ficha del curso.</p>
+        <p class="section-subtitle">Da clic en "Ver temario" para conocer el contenido de cada curso y solicitar informes.</p>
 
         <div class="courses-grid">
           <article class="course-card">
             <div class="course-media">
-              <img src="https://picsum.photos/seed/aban-inspectores/700/440" alt="Inspectores aeronáuticos revisando motor de aeronave" loading="lazy">
+              <img src="assets/images/cursos/formacion-inspectores-aeronauticos.jpg" alt="Grupo de alumnos en un aula durante el curso de formación de inspectores" loading="lazy">
               <span class="badge badge-blue">DGAC</span>
             </div>
             <div class="course-body">
               <h3>Formación de Inspectores Aeronáuticos</h3>
-              <p>Domina la capacitación de tripulaciones y sistemas de gestión de seguridad.</p>
-              <a href="http://localhost:8080/course/view.php?id=1" class="btn btn-outlined btn-block">Ver más</a>
+              <p>Reglamentación, metrología, control de proveedores y actividades RII para el inspector aeronáutico.</p>
+              <button type="button" class="btn btn-outlined btn-block" data-modal="ficha-inspectores">Ver temario</button>
             </div>
           </article>
 
           <article class="course-card">
             <div class="course-media">
-              <img src="https://picsum.photos/seed/aban-practicas/700/440" alt="Técnico revisando manual de mantenimiento de motor" loading="lazy">
+              <img src="assets/images/cursos/practicas-estandar-aeronave-motor.jpg" alt="Collage de helicópteros y aviones comerciales" loading="lazy">
               <span class="badge badge-blue">STPS</span>
             </div>
             <div class="course-body">
               <h3>Prácticas Estándar para Aeronave y Motor</h3>
-              <p>Manejo de manuales de mantenimiento y de reactores de acuerdo al marco normativo.</p>
-              <a href="http://localhost:8080/course/view.php?id=2" class="btn btn-outlined btn-block">Ver más</a>
+              <p>Manejo de manuales de mantenimiento y manuales rectores de acuerdo al marco normativo.</p>
+              <button type="button" class="btn btn-outlined btn-block" data-modal="ficha-practicas">Ver temario</button>
             </div>
           </article>
 
           <article class="course-card">
             <div class="course-media">
-              <img src="https://picsum.photos/seed/aban-particulas/700/440" alt="Inspección por partículas magnéticas en taller aeronáutico" loading="lazy">
-              <span class="badge badge-blue">ASTN</span>
+              <img src="assets/images/capacitaciones/inspeccion-uv-1.jpg" alt="Pieza con indicaciones fluorescentes bajo luz ultravioleta" loading="lazy">
+              <span class="badge badge-blue">ASNT</span>
             </div>
             <div class="course-body">
-              <h3>Partículas Magnéticas</h3>
-              <p>Teoría de magnetismo y aplicación de la corriente en las partículas magnéticas para su proceso de inspección.</p>
-              <a href="http://localhost:8080/course/view.php?id=3" class="btn btn-outlined btn-block">Ver más</a>
+              <h3>Pruebas No Destructivas</h3>
+              <p>Líquidos penetrantes, partículas magnéticas, ultrasonido, corrientes de Eddy y rayos X.</p>
+              <button type="button" class="btn btn-outlined btn-block" data-modal="ficha-pnd">Ver temario</button>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FICHAS DE CURSO (pop-ups) ===== -->
+    <dialog class="course-modal" id="ficha-inspectores" aria-labelledby="ficha-inspectores-titulo">
+      <div class="modal-hero">
+        <img src="assets/images/cursos/formacion-inspectores-aeronauticos.jpg" alt="">
+        <div class="modal-hero-copy">
+          <span class="badge badge-blue">DGAC</span>
+          <h2 id="ficha-inspectores-titulo">Formación de Inspectores Aeronáuticos</h2>
+        </div>
+        <button type="button" class="modal-close" data-close aria-label="Cerrar">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <span class="modal-label">Sobre el curso</span>
+          <p class="modal-desc">Prepara al personal técnico para desempeñarse como inspector aeronáutico: interpretación de manuales con base en el marco legislativo, reglamentación aplicada a la inspección, control de proveedores y de calidad, y actividades RII.</p>
+          <span class="modal-label">Temas clave</span>
+          <ol class="topic-list">
+            <li>Manuales de mantenimiento y rectores</li>
+            <li>Reglamentación aeronáutica en inspección</li>
+            <li>Hardware y corrosión</li>
+            <li>Selección y control de proveedores</li>
+            <li>Metrología en inspección</li>
+            <li>Calidad en combustibles</li>
+            <li>Actividades RII</li>
+          </ol>
+          <div class="modal-facts">
+            <div class="modal-fact">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5a7 7 0 1 0-14 0C5 14.8 12 21 12 21Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.5" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
+              <div><strong>Modalidad</strong><span>En nuestras instalaciones o en tu sede</span></div>
+            </div>
+            <div class="modal-fact">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <div><strong>Reserva tu fecha</strong><span>Con el 50% del pago al inscribirte</span></div>
+            </div>
+          </div>
+        </div>
+        <figure class="modal-temario">
+          <span class="modal-label">Temario</span>
+          <a href="assets/docs/temarios/formacion-inspectores-aeronauticos.pdf" target="_blank" rel="noopener">
+            <img src="assets/images/temarios/formacion-inspectores-aeronauticos.jpg" alt="Temario del curso Formación de Inspectores Aeronáuticos" loading="lazy">
+          </a>
+          <figcaption>Da clic en la imagen o <a href="assets/docs/temarios/formacion-inspectores-aeronauticos.pdf" target="_blank" rel="noopener">descarga el PDF</a>.</figcaption>
+        </figure>
+      </div>
+      <div class="modal-footer">
+        <p>¿Te interesa este curso? Te orientamos sin compromiso.</p>
+        <a href="contacto.html?curso=Formación%20de%20Inspectores%20Aeronáuticos" class="btn btn-secondary btn-lg">Contáctanos</a>
+      </div>
+    </dialog>
+
+    <dialog class="course-modal" id="ficha-practicas" aria-labelledby="ficha-practicas-titulo">
+      <div class="modal-hero">
+        <img src="assets/images/cursos/practicas-estandar-aeronave-motor.jpg" alt="">
+        <div class="modal-hero-copy">
+          <span class="badge badge-blue">STPS</span>
+          <h2 id="ficha-practicas-titulo">Prácticas Estándar para Aeronave y Motor</h2>
+        </div>
+        <button type="button" class="modal-close" data-close aria-label="Cerrar">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <span class="modal-label">Sobre el curso</span>
+          <p class="modal-desc">Aplica las prácticas estándar de mantenimiento en aeronave y motor conforme al marco normativo: uso correcto de manuales de mantenimiento y rectores, instalación y frenado de componentes, y control de la corrosión.</p>
+          <span class="modal-label">Temas clave</span>
+          <ol class="topic-list">
+            <li>Manuales de mantenimiento y rectores</li>
+            <li>Bujes, baleros y coples</li>
+            <li>Cables de control, frenado y rolado</li>
+            <li>Corrosión y su tratamiento</li>
+          </ol>
+          <div class="modal-facts">
+            <div class="modal-fact">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5a7 7 0 1 0-14 0C5 14.8 12 21 12 21Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.5" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
+              <div><strong>Modalidad</strong><span>En nuestras instalaciones o en tu sede</span></div>
+            </div>
+            <div class="modal-fact">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <div><strong>Reserva tu fecha</strong><span>Con el 50% del pago al inscribirte</span></div>
+            </div>
+          </div>
+        </div>
+        <figure class="modal-temario">
+          <span class="modal-label">Temario</span>
+          <a href="assets/docs/temarios/practicas-estandar-aeronave-motor.pdf" target="_blank" rel="noopener">
+            <img src="assets/images/temarios/practicas-estandar-aeronave-motor.jpg" alt="Temario del curso Prácticas Estándar para Aeronave y Motor" loading="lazy">
+          </a>
+          <figcaption>Da clic en la imagen o <a href="assets/docs/temarios/practicas-estandar-aeronave-motor.pdf" target="_blank" rel="noopener">descarga el PDF</a>.</figcaption>
+        </figure>
+      </div>
+      <div class="modal-footer">
+        <p>¿Te interesa este curso? Te orientamos sin compromiso.</p>
+        <a href="contacto.html?curso=Prácticas%20Estándar%20para%20Aeronave%20y%20Motor" class="btn btn-secondary btn-lg">Contáctanos</a>
+      </div>
+    </dialog>
+
+    <dialog class="course-modal" id="ficha-pnd" aria-labelledby="ficha-pnd-titulo">
+      <div class="modal-hero">
+        <img src="assets/images/capacitaciones/inspeccion-uv-1.jpg" alt="">
+        <div class="modal-hero-copy">
+          <span class="badge badge-blue">ASNT</span>
+          <h2 id="ficha-pnd-titulo">Pruebas No Destructivas</h2>
+        </div>
+        <button type="button" class="modal-close" data-close aria-label="Cerrar">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <span class="modal-label">Sobre el curso</span>
+          <p class="modal-desc">Conoce los principales métodos de pruebas no destructivas para detectar y evaluar discontinuidades en superficies y materiales sin dañar la pieza, con teoría en aula y práctica con equipo real.</p>
+          <span class="modal-label">Temas clave</span>
+          <ol class="topic-list">
+            <li>Introducción a las PND</li>
+            <li>Líquidos penetrantes</li>
+            <li>Partículas magnéticas</li>
+            <li>Ultrasonido</li>
+            <li>Corrientes de Eddy</li>
+            <li>Rayos X</li>
+          </ol>
+          <div class="modal-facts">
+            <div class="modal-fact">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5a7 7 0 1 0-14 0C5 14.8 12 21 12 21Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.5" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
+              <div><strong>Modalidad</strong><span>En nuestras instalaciones o en tu sede</span></div>
+            </div>
+            <div class="modal-fact">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <div><strong>Reserva tu fecha</strong><span>Con el 50% del pago al inscribirte</span></div>
+            </div>
+          </div>
+        </div>
+        <figure class="modal-temario">
+          <span class="modal-label">Temario</span>
+          <a href="assets/docs/temarios/pruebas-no-destructivas.pdf" target="_blank" rel="noopener">
+            <img src="assets/images/temarios/pruebas-no-destructivas.jpg" alt="Temario del curso Pruebas No Destructivas" loading="lazy">
+          </a>
+          <figcaption>Da clic en la imagen o <a href="assets/docs/temarios/pruebas-no-destructivas.pdf" target="_blank" rel="noopener">descarga el PDF</a>.</figcaption>
+        </figure>
+      </div>
+      <div class="modal-footer">
+        <p>¿Te interesa este curso? Te orientamos sin compromiso.</p>
+        <a href="contacto.html?curso=Pruebas%20No%20Destructivas" class="btn btn-secondary btn-lg">Contáctanos</a>
+      </div>
+    </dialog>
+
+    <!-- ===== CATÁLOGO COMPLETO ===== -->
+    <section class="catalog" id="catalogo">
+      <div class="container">
+        <h2 class="section-title">Cursos Autorizados</h2>
+        <p class="section-subtitle">Consulta el temario de cada curso. Si te interesa alguno, agenda una sesión y un asesor te orienta sobre fechas y modalidad.</p>
+
+        <div class="catalog-block">
+          <h3 class="catalog-block-title"><span>Bloque 1</span> Mantenimiento e inspección</h3>
+          <div class="catalog-grid">
+            <article class="catalog-card">
+              <img src="assets/images/cursos/administracion-mantenimiento-aereo.jpg" alt="" loading="lazy">
+              <div class="catalog-card-body">
+                <h4>Administración del Mantenimiento Aéreo</h4>
+                <a href="assets/docs/temarios/administracion-mantenimiento-aereo.pdf" target="_blank" rel="noopener" class="btn btn-outlined btn-sm btn-block">Ver temario</a>
+              </div>
+            </article>
+            <article class="catalog-card">
+              <img src="assets/images/cursos/factores-humanos.jpg" alt="" loading="lazy">
+              <div class="catalog-card-body">
+                <h4>Factores Humanos</h4>
+                <a href="assets/docs/temarios/factores-humanos.pdf" target="_blank" rel="noopener" class="btn btn-outlined btn-sm btn-block">Ver temario</a>
+              </div>
+            </article>
+            <article class="catalog-card">
+              <img src="assets/images/cursos/formacion-inspectores-aeronauticos.jpg" alt="" loading="lazy">
+              <div class="catalog-card-body">
+                <h4>Formación de Inspectores Aeronáuticos</h4>
+                <a href="assets/docs/temarios/formacion-inspectores-aeronauticos.pdf" target="_blank" rel="noopener" class="btn btn-outlined btn-sm btn-block">Ver temario</a>
+              </div>
+            </article>
+            <article class="catalog-card">
+              <img src="assets/images/cursos/practicas-estandar-aeronave-motor.jpg" alt="" loading="lazy">
+              <div class="catalog-card-body">
+                <h4>Prácticas Estándar para Aeronave y Motor</h4>
+                <a href="assets/docs/temarios/practicas-estandar-aeronave-motor.pdf" target="_blank" rel="noopener" class="btn btn-outlined btn-sm btn-block">Ver temario</a>
+              </div>
+            </article>
+            <article class="catalog-card">
+              <img src="assets/images/cursos/pruebas-no-destructivas.jpg" alt="" loading="lazy">
+              <div class="catalog-card-body">
+                <h4>Pruebas No Destructivas</h4>
+                <a href="assets/docs/temarios/pruebas-no-destructivas.pdf" target="_blank" rel="noopener" class="btn btn-outlined btn-sm btn-block">Ver temario</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="catalog-block">
+          <h3 class="catalog-block-title"><span>Bloque 2</span> Calidad, normatividad y metrología</h3>
+          <div class="catalog-grid">
+            <article class="catalog-card">
+              <img src="assets/images/cursos/formacion-auditores-calidad.jpg" alt="" loading="lazy">
+              <div class="catalog-card-body">
+                <h4>Formación de Auditores de Sistemas de Calidad</h4>
+                <a href="assets/docs/temarios/formacion-auditores-calidad.pdf" target="_blank" rel="noopener" class="btn btn-outlined btn-sm btn-block">Ver temario</a>
+              </div>
+            </article>
+            <article class="catalog-card">
+              <img src="assets/images/cursos/induccion-sistemas-calidad.jpg" alt="" loading="lazy">
+              <div class="catalog-card-body">
+                <h4>Inducción a los Sistemas de Calidad</h4>
+                <a href="assets/docs/temarios/induccion-sistemas-calidad.pdf" target="_blank" rel="noopener" class="btn btn-outlined btn-sm btn-block">Ver temario</a>
+              </div>
+            </article>
+            <article class="catalog-card">
+              <img src="assets/images/cursos/legislacion-aeronautica.jpg" alt="" loading="lazy">
+              <div class="catalog-card-body">
+                <h4>Legislación Aeronáutica</h4>
+                <a href="assets/docs/temarios/legislacion-aeronautica.pdf" target="_blank" rel="noopener" class="btn btn-outlined btn-sm btn-block">Ver temario</a>
+              </div>
+            </article>
+            <article class="catalog-card">
+              <img src="assets/images/cursos/manejo-combustibles-aviacion.jpg" alt="" loading="lazy">
+              <div class="catalog-card-body">
+                <h4>Manejo de Combustibles para Aviación</h4>
+                <a href="assets/docs/temarios/manejo-combustibles-aviacion.pdf" target="_blank" rel="noopener" class="btn btn-outlined btn-sm btn-block">Ver temario</a>
+              </div>
+            </article>
+            <article class="catalog-card">
+              <img src="assets/images/cursos/metrologia-aeronautica.jpg" alt="" loading="lazy">
+              <div class="catalog-card-body">
+                <h4>Metrología en Aeronáutica</h4>
+                <a href="assets/docs/temarios/metrologia-aeronautica.pdf" target="_blank" rel="noopener" class="btn btn-outlined btn-sm btn-block">Ver temario</a>
+              </div>
+            </article>
+            <article class="catalog-card">
+              <img src="assets/images/cursos/metrologia-aeronautica-ii.jpg" alt="" loading="lazy">
+              <div class="catalog-card-body">
+                <h4>Metrología en Aeronáutica II (Cálculo de Incertidumbre)</h4>
+                <a href="assets/docs/temarios/metrologia-aeronautica-ii.pdf" target="_blank" rel="noopener" class="btn btn-outlined btn-sm btn-block">Ver temario</a>
+              </div>
+            </article>
+            <article class="catalog-card">
+              <img src="assets/images/cursos/tecnologia-materiales.jpg" alt="" loading="lazy">
+              <div class="catalog-card-body">
+                <h4>Tecnología de Materiales</h4>
+                <a href="assets/docs/temarios/tecnologia-materiales.pdf" target="_blank" rel="noopener" class="btn btn-outlined btn-sm btn-block">Ver temario</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="catalog-block">
+          <h3 class="catalog-block-title"><span>Bloque 3</span> Especialidades técnicas</h3>
+          <div class="catalog-grid">
+            <article class="catalog-card">
+              <img src="assets/images/cursos/ewis.jpg" alt="" loading="lazy">
+              <div class="catalog-card-body">
+                <h4>EWIS (Electrical Wiring Interconnection Systems)</h4>
+                <a href="assets/docs/temarios/ewis.pdf" target="_blank" rel="noopener" class="btn btn-outlined btn-sm btn-block">Ver temario</a>
+              </div>
+            </article>
+            <article class="catalog-card">
+              <img src="assets/images/cursos/inspecciones-boroscopicas.jpg" alt="" loading="lazy">
+              <div class="catalog-card-body">
+                <h4>Inspecciones Boroscópicas</h4>
+                <a href="assets/docs/temarios/inspecciones-boroscopicas.pdf" target="_blank" rel="noopener" class="btn btn-outlined btn-sm btn-block">Ver temario</a>
+              </div>
+            </article>
+            <article class="catalog-card">
+              <img src="assets/images/capacitaciones/practica-inspeccion-grupo.jpg" alt="" loading="lazy">
+              <div class="catalog-card-body">
+                <h4>Inspecciones RII</h4>
+                <a href="assets/docs/temarios/inspecciones-rii.pdf" target="_blank" rel="noopener" class="btn btn-outlined btn-sm btn-block">Ver temario</a>
+              </div>
+            </article>
+            <article class="catalog-card">
+              <img src="assets/images/cursos/practicas-estandar-reparaciones-estructurales.jpg" alt="" loading="lazy">
+              <div class="catalog-card-body">
+                <h4>Prácticas Estándar en Reparaciones Estructurales</h4>
+                <a href="assets/docs/temarios/practicas-estandar-reparaciones-estructurales.pdf" target="_blank" rel="noopener" class="btn btn-outlined btn-sm btn-block">Ver temario</a>
+              </div>
+            </article>
+            <article class="catalog-card">
+              <img src="assets/images/cursos/separacion-vertical-minima-reducida.jpg" alt="" loading="lazy">
+              <div class="catalog-card-body">
+                <h4>Separación Vertical Mínima Reducida Nivel I</h4>
+                <a href="assets/docs/temarios/separacion-vertical-minima-reducida.pdf" target="_blank" rel="noopener" class="btn btn-outlined btn-sm btn-block">Ver temario</a>
+              </div>
+            </article>
+            <article class="catalog-card">
+              <img src="assets/images/cursos/tratamiento-anticorrosivo.jpg" alt="" loading="lazy">
+              <div class="catalog-card-body">
+                <h4>Tratamiento Anticorrosivo</h4>
+                <a href="assets/docs/temarios/tratamiento-anticorrosivo.pdf" target="_blank" rel="noopener" class="btn btn-outlined btn-sm btn-block">Ver temario</a>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
