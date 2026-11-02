@@ -460,6 +460,9 @@ ul { list-style: none; margin: 0; padding: 0; }
 .form-status.success { color: #15803D; }
 .form-status.error { color: #DC2626; }
 
+/* Campo trampa para robots: fuera de la vista, no lo ve el usuario */
+.campo-trampa { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+
 .side-info { display: flex; flex-direction: column; gap: 16px; }
 .info-card {
   background: var(--secondary-050);

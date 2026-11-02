@@ -44,7 +44,7 @@
 
     <section class="form-section">
       <div class="container form-grid">
-        <form class="card-form ajax-form" data-endpoint="/enviar-contacto" data-tipo="Agendar Sesión">
+        <form class="card-form ajax-form" data-endpoint="https://5jp5w5awwi3kx6ocrmsyrvtome0rqadp.lambda-url.us-east-1.on.aws/" data-tipo="Agendar Sesión">
           <div class="form-row">
             <div class="field">
               <label for="nombre">Nombre completo</label>
@@ -113,6 +113,8 @@
             <label for="mensaje">Comentarios (opcional)</label>
             <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos brevemente qué necesitas."></textarea>
           </div>
+
+          <div class="campo-trampa" aria-hidden="true"><label>No llenar este campo <input type="text" name="sitio_web" tabindex="-1" autocomplete="off"></label></div>
 
           <button type="submit" class="btn btn-secondary btn-lg btn-block">Agendar mi sesión</button>
           <p class="form-status" role="status" aria-live="polite"></p>
