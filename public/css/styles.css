@@ -794,6 +794,185 @@ body:has(.course-modal[open]) { overflow: hidden; }
 }
 
 /* =========================================================
+   LOGO ORIGINAL Y SLOGAN (todas las páginas)
+   ========================================================= */
+/* El logo original (emblema + "GRUPO ABAN") ya trae el nombre: va como placa clara */
+.logo img[src*="logo-grupo-aban"] { height: 52px; background: var(--white); padding: 3px 6px; }
+.slogan-band {
+  background: var(--white);
+  border-bottom: 1px solid var(--neutral-200);
+  padding: 14px 0;
+}
+.slogan-band p {
+  text-align: center;
+  color: var(--secondary-700);
+  font-size: 15px;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1.45;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+/* =========================================================
+   HERO AMPLIO (Cursos)
+   ========================================================= */
+.hero-wide { padding: 48px 0 8px; text-align: center; }
+.hero-wide-title { font-size: 36px; line-height: 1.2; margin-bottom: 28px; }
+.hero-wide-img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  margin: 0 auto;
+  aspect-ratio: 1600 / 736;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  background: var(--neutral-100);
+}
+.hero-wide-tagline {
+  max-width: 900px;
+  margin: 28px auto 0;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.hero-wide .container > * { animation: slide-in-up .8s var(--ease-out) both; }
+.hero-wide .container > :nth-child(2) { animation-delay: .1s; }
+.hero-wide .container > :nth-child(3) { animation-delay: .2s; }
+.hero-wide + .features { padding-top: 40px; }
+
+/* Botones Moodle / Presencial y títulos de cada modalidad */
+.modality-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 900px;
+  margin-top: 40px;
+}
+.btn-modality {
+  padding: 16px 28px;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: var(--radius-md);
+}
+.modality-title {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 20px;
+  padding: 10px 48px;
+  background: var(--secondary-600);
+  color: var(--white);
+  border-radius: var(--radius-md);
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.modality-note {
+  max-width: 820px;
+  margin: 0 auto 44px;
+  padding: 16px 24px;
+  background: var(--secondary-050);
+  border-radius: var(--radius-md);
+  color: var(--neutral-600);
+  font-size: 17px;
+  line-height: 1.5;
+  text-align: center;
+}
+#presencial .courses-grid { row-gap: 32px; }
+
+/* =========================================================
+   PESTAÑAS (Nosotros)
+   ========================================================= */
+.tabs { align-self: start; }
+.tab-list {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.tab {
+  flex: 1 1 auto;
+  padding: 12px 18px;
+  border: none;
+  background: var(--white);
+  font-family: var(--font-base);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary-700);
+  cursor: pointer;
+  transition: background-color .15s ease, color .15s ease;
+}
+.tab + .tab { border-left: 1px solid var(--neutral-200); }
+.tab:hover { background: var(--neutral-100); }
+.tab[aria-selected="true"] { background: var(--secondary-600); color: var(--white); }
+.tab-panel p { color: var(--neutral-600); font-size: 15.5px; line-height: 1.7; margin-bottom: 16px; text-align: justify; }
+.tab-panel strong { color: var(--primary-900); }
+.tab-panel:not([hidden]) { animation: slide-in-up .35s var(--ease-out) both; }
+.values-list li { color: var(--neutral-600); font-size: 15px; line-height: 1.6; margin-bottom: 6px; }
+.values-list b { color: var(--secondary-600); font-size: 17px; }
+.values-list .values-gap { margin-top: 14px; }
+
+/* =========================================================
+   SERVICIOS PND
+   ========================================================= */
+.services-pnd { background: var(--white); padding: 64px 0 72px; }
+.pnd-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+.pnd-card {
+  flex: 0 1 calc((100% - 48px) / 3);
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: transform .3s var(--ease-out), box-shadow .3s var(--ease-out), border-color .3s ease;
+}
+.pnd-card:hover { transform: translateY(-4px); border-color: var(--secondary-100); box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08); }
+.pnd-card img { width: 100%; aspect-ratio: 432 / 266; object-fit: cover; background: var(--neutral-100); }
+.pnd-card-body { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; padding: 18px 20px 22px; }
+.pnd-card h3 { font-size: 18px; }
+.pnd-cta { display: flex; justify-content: center; margin-top: 48px; }
+.pnd-cta .btn { min-width: min(560px, 100%); }
+
+/* Ficha de servicio: una sola columna de texto */
+.service-modal .modal-body { grid-template-columns: minmax(0, 1fr); }
+.service-modal .modal-desc { margin-bottom: 16px; text-align: justify; }
+.service-modal .modal-label { margin-top: 8px; }
+.modal-bullets { padding-left: 20px; list-style: disc; color: var(--neutral-600); font-size: 15.5px; line-height: 1.65; }
+.modal-bullets li { margin-bottom: 6px; }
+
+@media (max-width: 900px) {
+  .pnd-card { flex-basis: calc((100% - 24px) / 2); }
+  .hero-wide-title { font-size: 28px; }
+  .hero-wide-tagline { font-size: 18px; }
+}
+@media (max-width: 760px) {
+  .logo img[src*="logo-grupo-aban"] { height: 44px; }
+  .slogan-band p { font-size: 12.5px; }
+  .modality-buttons { grid-template-columns: 1fr; gap: 14px; }
+  .btn-modality { font-size: 20px; }
+  .modality-title { font-size: 22px; padding: 8px 32px; }
+  .modality-note { font-size: 15px; }
+}
+@media (max-width: 560px) {
+  .pnd-card { flex-basis: 100%; }
+  .tab { flex-basis: 50%; }
+  .tab:nth-child(3) { border-left: none; }
+  .tab:nth-child(n+3) { border-top: 1px solid var(--neutral-200); }
+  .tab-panel p { text-align: left; }
+}
+
+/* =========================================================
    ANIMACIONES
    Sutiles a propósito: duraciones cortas, desplazamientos
    pequeños y una sola curva de easing en todo el sitio.

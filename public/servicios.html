@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios de inspección PND | Grupo ABAN</title>
+  <meta name="description" content="Servicios de inspección por pruebas no destructivas: líquidos penetrantes, ultrasonido, partículas magnéticas, inspección visual y corrientes Eddy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/marca/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/marca/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Grupo ABAN, ir al inicio"><img src="assets/images/marca/logo-grupo-aban.jpg" alt="Grupo ABAN" width="130" height="52"></a>
+      <nav class="main-nav" id="mainNav">
+        <a href="nosotros.html" class="nav-link">Nosotros</a>
+        <a href="index.html" class="nav-link">Cursos</a>
+        <a href="servicios.html" class="nav-link active">Servicios</a>
+        <a href="agendar-sesion.html" class="nav-link">Agendar Sesión</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <a href="https://cursos.grupoaban.net/login/index.php" class="btn btn-outlined-inverse">Login</a>
+        <a href="https://cursos.grupoaban.net/course/index.php" class="btn btn-secondary">Ver Cursos</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="slogan-band"><p class="container">“No hay una fórmula mágica para el éxito, pero sí hay un solo camino que te llevará a él: la capacitación y la acción constante”</p></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>¿Necesitas servicios de inspección PND?</h1>
+        <p>Contáctanos y recibe asesoría sobre el método de inspección adecuado para tus componentes y necesidades. Solicita una cotización hoy mismo.</p>
+      </div>
+    </section>
+
+    <section class="services-pnd">
+      <div class="container">
+        <div class="pnd-grid">
+          <article class="pnd-card">
+            <img src="assets/images/servicios/liquidos-penetrantes.jpg" alt="Brida con líquido penetrante rojo aplicado" loading="lazy" width="432" height="266">
+            <div class="pnd-card-body">
+              <h3>Líquidos Penetrantes (LP)</h3>
+              <button type="button" class="btn btn-outlined btn-sm" data-modal="pnd-lp">Leer más</button>
+            </div>
+          </article>
+          <article class="pnd-card">
+            <img src="assets/images/servicios/ultrasonido.jpg" alt="Inspección por ultrasonido de una barra metálica" loading="lazy" width="432" height="266">
+            <div class="pnd-card-body">
+              <h3>Ultrasonido (UT)</h3>
+              <button type="button" class="btn btn-outlined btn-sm" data-modal="pnd-ut">Leer más</button>
+            </div>
+          </article>
+          <article class="pnd-card">
+            <img src="assets/images/servicios/particulas-magneticas.jpg" alt="Yugo magnético sobre una pieza metálica" loading="lazy" width="432" height="266">
+            <div class="pnd-card-body">
+              <h3>Partículas Magnéticas (MT)</h3>
+              <button type="button" class="btn btn-outlined btn-sm" data-modal="pnd-mt">Leer más</button>
+            </div>
+          </article>
+          <article class="pnd-card">
+            <img src="assets/images/servicios/visual.jpg" alt="Inspección visual con espejo dentro de un componente" loading="lazy" width="432" height="266">
+            <div class="pnd-card-body">
+              <h3>Visual (VT)</h3>
+              <button type="button" class="btn btn-outlined btn-sm" data-modal="pnd-vt">Leer más</button>
+            </div>
+          </article>
+          <article class="pnd-card">
+            <img src="assets/images/servicios/corrientes-eddy.jpg" alt="Equipo de corrientes Eddy durante una inspección" loading="lazy" width="432" height="266">
+            <div class="pnd-card-body">
+              <h3>Corrientes Eddy (ET)</h3>
+              <button type="button" class="btn btn-outlined btn-sm" data-modal="pnd-et">Leer más</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="pnd-cta">
+          <a href="contacto.html?servicio=Pruebas%20No%20Destructivas" class="btn btn-secondary btn-modality">Solicitar cotización</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LEER MÁS (pop-ups) ===== -->
+    <dialog class="course-modal service-modal" id="pnd-lp" aria-labelledby="pnd-lp-titulo">
+      <div class="modal-hero">
+        <img src="assets/images/servicios/liquidos-penetrantes.jpg" alt="">
+        <div class="modal-hero-copy"><h2 id="pnd-lp-titulo">Líquidos Penetrantes (LP)</h2></div>
+        <button type="button" class="modal-close" data-close aria-label="Cerrar">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <span class="modal-label">Acerca de este método</span>
+          <p class="modal-desc">La inspección por líquidos penetrantes es un método que se utiliza para revelar defectos de rotura superficial por medio de un tinte coloreado o fluorescente desde la falla. La técnica se basa en la capacidad de un líquido para introducirse en una ruptura de superficie "limpia" por acción de la capilaridad. Después de un período llamado tiempo de penetración ("dwell time"), se elimina el exceso de penetrante superficial y se aplica un revelador, el cual actúa como un papel secante. Esto saca el líquido penetrante desde la falla, revelando su presencia. Los líquidos penetrantes coloreados (de contraste) requieren buena luz blanca, mientras que los penetrantes fluorescentes deben usarse en condiciones oscuras con una "luz negra" ultravioleta.</p>
+          <span class="modal-label">¿Por qué usar este método?</span>
+          <p class="modal-desc">La ventaja de una inspección con líquidos penetrantes (LP) sobre una inspección visual es que hace que los defectos sean más fáciles de ver para el inspector. Básicamente, hay dos maneras en que un proceso de inspección penetrante hace que los defectos se vean con mayor facilidad. En primer lugar, el LP produce una indicación de falla que es mucho más grande y más fácil de detectar para el ojo que la falla misma. Muchos defectos son tan pequeños o angostos que son indetectables a simple vista. Debido a las características físicas del ojo, hay un umbral por debajo del cual los objetos no se pueden resolver. Este umbral de agudeza visual es de alrededor de 0.003 pulgadas para una persona con visión 20/20. La segunda forma en que el LP mejora la detección de un defecto es que produce una indicación de falla con un alto nivel de contraste entre la indicación y el fondo, lo que también ayuda a que la indicación se vea más fácilmente. Cuando se realiza una inspección con penetrantes visibles, los materiales penetrantes se formulan usando un tinte rojo brillante que proporciona un alto nivel de contraste con el revelador blanco. En otras palabras, el revelador sirve como un fondo de alto contraste y, de la misma forma, actúa como un papel secante para extraer el penetrante atrapado en la falla. Cuando se realiza una inspección de penetrante fluorescente, los materiales penetrantes están formulados para brillar intensamente y emitir luz a una longitud de onda a la que el ojo es más sensible en condiciones de poca luz.</p>
+          <span class="modal-label">¿Cuándo usar este método?</span>
+          <p class="modal-desc">El método de líquidos penetrantes se realiza con una solución de colorante. Una vez aplicado a la superficie, el tinte penetra en cualquier cavidad que rompa la superficie. El exceso de solución se elimina del objeto. A continuación, se aplica un revelador para extraer cualquier penetrante que permanezca oculto. Con los tintes fluorescentes, la luz ultravioleta se utiliza para hacer que el líquido sea fluorescente, permitiendo que las imperfecciones se vean fácilmente. Con los tintes visibles, un contraste de color entre el penetrante y el revelador hace que el líquido sea fácil de ver sin necesidad de usar luz ultravioleta.</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>¿Necesitas una inspección por líquidos penetrantes?</p>
+        <a href="contacto.html?servicio=Líquidos%20Penetrantes%20(LP)" class="btn btn-secondary btn-lg">Solicitar cotización</a>
+      </div>
+    </dialog>
+
+    <dialog class="course-modal service-modal" id="pnd-ut" aria-labelledby="pnd-ut-titulo">
+      <div class="modal-hero">
+        <img src="assets/images/servicios/ultrasonido.jpg" alt="">
+        <div class="modal-hero-copy"><h2 id="pnd-ut-titulo">Ultrasonido (UT)</h2></div>
+        <button type="button" class="modal-close" data-close aria-label="Cerrar">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <span class="modal-label">Acerca de este método</span>
+          <p class="modal-desc">La inspección por ultrasonido es un método para caracterizar el grosor o la estructura interna de una pieza de prueba, utilizando ondas de sonido de alta frecuencia para encontrar los defectos de la soldadura y del metal base.</p>
+          <span class="modal-label">¿Por qué usar este método?</span>
+          <p class="modal-desc">La inspección por ultrasonido permite caracterizar el grosor o la estructura interna de una pieza de prueba, utilizando ondas de sonido de alta frecuencia para encontrar los defectos de la soldadura y del metal base.</p>
+          <p class="modal-desc">Se utiliza tanto sin contacto como de forma remota, lo que permite la inspección de muestras a alta temperatura, y se puede usar en soldaduras con acceso restringido. Permite la inspección de geometrías pequeñas y complejas, y con altas frecuencias es capaz de detectar defectos muy pequeños.</p>
+          <span class="modal-label">¿Cuándo usar este método?</span>
+          <p class="modal-desc">El método de inspección por ultrasonido utiliza ondas de sonido de alta frecuencia que se transmiten a un material para detectar discontinuidades o localizar cambios en las características del material. El sonido se introduce en el objeto que se examina, y las reflexiones de imperfecciones internas, áreas de impedancia acústica o superficies geométricas variables se devuelven a un receptor.</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>¿Necesitas una inspección por ultrasonido?</p>
+        <a href="contacto.html?servicio=Ultrasonido%20(UT)" class="btn btn-secondary btn-lg">Solicitar cotización</a>
+      </div>
+    </dialog>
+
+    <dialog class="course-modal service-modal" id="pnd-mt" aria-labelledby="pnd-mt-titulo">
+      <div class="modal-hero">
+        <img src="assets/images/servicios/particulas-magneticas.jpg" alt="">
+        <div class="modal-hero-copy"><h2 id="pnd-mt-titulo">Partículas Magnéticas (MT)</h2></div>
+        <button type="button" class="modal-close" data-close aria-label="Cerrar">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <span class="modal-label">Acerca de este método</span>
+          <p class="modal-desc">La inspección por partículas magnéticas (MT) es un método muy popular y de bajo costo para llevar a cabo técnicas no destructivas en materiales ferromagnéticos. Se logra induciendo un campo magnético en un material ferromagnético y aplicando partículas de hierro a la superficie del elemento que se está examinando. Es un método que verifica las discontinuidades de la superficie, pero también puede revelar discontinuidades ligeramente debajo de la superficie.</p>
+          <p class="modal-desc">Las discontinuidades superficiales y cercanas a la superficie afectan el flujo del campo magnético dentro de la pieza, haciendo que las partículas aplicadas se reúnan en las ubicaciones de fuga de flujo, produciendo así una indicación visible de la irregularidad en la superficie del material.</p>
+          <span class="modal-label">¿Por qué usar este método?</span>
+          <p class="modal-desc">En la década de 1930, el método de partículas magnéticas reemplazó rápidamente al método de petróleo y polvo (antecesor de los líquidos penetrantes) en la industria del ferrocarril, ya que era más rápido y no dejaba atrás el polvo blanco que requería limpieza. Después de una evaluación por partículas magnéticas solo queda polvo de hierro, que puede desprenderse o soplarse fácilmente.</p>
+          <span class="modal-label">¿Cuándo usar este método?</span>
+          <p class="modal-desc">Dos de los métodos más utilizados son el sistema estacionario horizontal, que utiliza técnicas de magnetización longitudinal y circular, y la técnica de yugo, muy portátil.</p>
+          <p class="modal-desc">ASME requiere que el método de partículas magnéticas visibles (contraste de color) se evalúe con una intensidad de luz mínima de 100 pies-candela en la superficie de la pieza. La cantidad adecuada de luz debe verificarse con un medidor de luz calibrado, atestiguado y aceptado por el inspector. Si se usan partículas magnéticas fluorescentes, la luz negra deberá alcanzar un mínimo de 1,000 microwatts por centímetro cuadrado en la superficie examinada; también se pueden utilizar fuentes de luz de longitud de onda alternativa que proporcionen la luz ultravioleta que causa la fluorescencia de las partículas.</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>¿Necesitas una inspección por partículas magnéticas?</p>
+        <a href="contacto.html?servicio=Partículas%20Magnéticas%20(MT)" class="btn btn-secondary btn-lg">Solicitar cotización</a>
+      </div>
+    </dialog>
+
+    <dialog class="course-modal service-modal" id="pnd-vt" aria-labelledby="pnd-vt-titulo">
+      <div class="modal-hero">
+        <img src="assets/images/servicios/visual.jpg" alt="">
+        <div class="modal-hero-copy"><h2 id="pnd-vt-titulo">Visual (VT)</h2></div>
+        <button type="button" class="modal-close" data-close aria-label="Cerrar">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <span class="modal-label">Acerca de este método</span>
+          <p class="modal-desc">El método de inspección visual es el método de prueba no destructivo más antiguo y más común, y es una forma efectiva de reconocer las imperfecciones de la superficie que podrían afectar negativamente a una pieza o componente. Las inspecciones visuales usan el conocimiento de cómo se fabrica una pieza, la función del ojo humano, los requisitos de iluminación y herramientas de medición precisas para evaluar los materiales.</p>
+          <p class="modal-desc">También se pueden usar ayudas ópticas como boroscopios, fibroscopios, lupas y espejos para reconocer y medir las características de un componente.</p>
+          <p class="modal-desc">En las pruebas visuales se verifican las formas del producto, incluidas piezas moldeadas, piezas forjadas, componentes mecanizados y elementos de soldadura, entre otros.</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>¿Necesitas una inspección visual?</p>
+        <a href="contacto.html?servicio=Inspección%20Visual%20(VT)" class="btn btn-secondary btn-lg">Solicitar cotización</a>
+      </div>
+    </dialog>
+
+    <dialog class="course-modal service-modal" id="pnd-et" aria-labelledby="pnd-et-titulo">
+      <div class="modal-hero">
+        <img src="assets/images/servicios/corrientes-eddy.jpg" alt="">
+        <div class="modal-hero-copy"><h2 id="pnd-et-titulo">Corrientes Eddy (ET)</h2></div>
+        <button type="button" class="modal-close" data-close aria-label="Cerrar">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <span class="modal-label">Acerca de este método</span>
+          <p class="modal-desc">La inspección por corrientes Eddy es un método de pruebas no destructivas basado en el principio de inducción electromagnética.</p>
+          <span class="modal-label">¿Por qué usar este método?</span>
+          <p class="modal-desc">Las aplicaciones de corrientes Eddy en la industria son numerosas y muy amplias: este método puede detectar discontinuidades en diferentes materiales conductivos (aluminio, acero, titanio, hierro, magnesio, etc.), así como detectar cambios de espesor y medir la conductividad de diferentes metales.</p>
+          <span class="modal-label">Aplicaciones aeroespaciales</span>
+          <ul class="modal-bullets">
+            <li>En la industria aeroespacial numerosas partes tienen un recubrimiento especial; este método permite compararlas con base en su conductividad y saber la aleación exacta del material.</li>
+            <li>Detección de roturas y de corrosión, los dos principales enemigos de las estructuras de las aeronaves.</li>
+            <li>Detección de discontinuidades subsuperficiales.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>¿Necesitas una inspección por corrientes Eddy?</p>
+        <a href="contacto.html?servicio=Corrientes%20Eddy%20(ET)" class="btn btn-secondary btn-lg">Solicitar cotización</a>
+      </div>
+    </dialog>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <p class="footer-logo">Grupo ABAN</p>
+        <p>Capacitación profesional para el mundo actual.</p>
+        <p class="footer-copy">© 2026 Grupo ABAN. Todos los derechos reservados.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Enlaces Rápidos</h4>
+        <a href="index.html">Cursos</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="https://cursos.grupoaban.net">Moodle (cursos.grupoaban.net)</a>
+        <a href="agendar-sesion.html">Agendar Sesión</a>
+        <a href="nosotros.html">Nosotros</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Aviso de Privacidad</a>
+        <a href="#">Términos y Condiciones</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="mailto:soporte.aban@gmail.com" class="footer-icon-link">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="m2 6 10 7L22 6" stroke="currentColor" stroke-width="2"/></svg>
+          soporte.aban@gmail.com
+        </a>
+        <a href="contacto.html" class="footer-icon-link">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z" stroke="currentColor" stroke-width="2"/></svg>
+          Ir a Contacto
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Los hermanos dentro de una misma rejilla se escalonan ligeramente.
   const revealSelector = [
     '.section-title', '.section-subtitle', '.catalog-block-title',
-    '.feature-card', '.course-card', '.catalog-card', '.service-card',
+    '.feature-card', '.course-card', '.catalog-card', '.service-card', '.pnd-card',
     '.about-grid > *', '.gallery-grid figure', '.cta-content',
     '.card-form', '.info-card', '.map-embed'
   ].join(',');
@@ -63,13 +63,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Contacto: si viene de una ficha (?curso=...), prellena asunto y mensaje
-  const curso = new URLSearchParams(location.search).get('curso');
+  // Pestañas (Nosotros: Quiénes Somos / Visión / Misión / Valores).
+  // Sin JS se ven todos los paneles uno debajo de otro.
+  document.querySelectorAll('[data-tabs]').forEach((group) => {
+    const tabs = Array.from(group.querySelectorAll('[role="tab"]'));
+    const select = (tab, focus) => {
+      tabs.forEach((t) => {
+        const on = t === tab;
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      });
+      if (focus) tab.focus();
+    };
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => select(tab, false));
+      // Flechas izquierda/derecha, Inicio y Fin, como en un tablist estándar
+      tab.addEventListener('keydown', (e) => {
+        const keys = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 };
+        if (!(e.key in keys)) return;
+        e.preventDefault();
+        select(tabs[(keys[e.key] + tabs.length) % tabs.length], true);
+      });
+    });
+    select(tabs.find((t) => t.getAttribute('aria-selected') === 'true') || tabs[0], false);
+  });
+
+  // Contacto: si viene de una ficha (?curso=...) o de Servicios (?servicio=...), prellena asunto y mensaje
+  const params = new URLSearchParams(location.search);
+  const curso = params.get('curso');
+  const servicio = params.get('servicio');
   const asunto = document.getElementById('asunto');
   const mensaje = document.getElementById('mensaje');
   if (curso && asunto && mensaje) {
     asunto.value = 'Información de cursos';
     mensaje.value = `Hola, me interesa el curso "${curso}". Quisiera recibir información sobre fechas, costos y modalidad.`;
+  } else if (servicio && asunto && mensaje) {
+    asunto.value = 'Pruebas No Destructivas';
+    mensaje.value = servicio === 'Pruebas No Destructivas'
+      ? 'Hola, quisiera solicitar una cotización de servicios de inspección por pruebas no destructivas. Los componentes a inspeccionar son: '
+      : `Hola, quisiera solicitar una cotización de inspección por ${servicio}. Los componentes a inspeccionar son: `;
   }
 
   // Envío de formularios (Contacto / Agendar Sesión) al backend

@@ -17,11 +17,12 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="logo" aria-label="Grupo ABAN, ir al inicio"><img src="assets/images/marca/logo-emblema.png" alt="" width="110" height="52"><span>Grupo ABAN</span></a>
+      <a href="index.html" class="logo" aria-label="Grupo ABAN, ir al inicio"><img src="assets/images/marca/logo-grupo-aban.jpg" alt="Grupo ABAN" width="130" height="52"></a>
       <nav class="main-nav" id="mainNav">
-        <a href="index.html" class="nav-link">Cursos</a>
-        <a href="agendar-sesion.html" class="nav-link">Agendar Sesión</a>
         <a href="nosotros.html" class="nav-link active">Nosotros</a>
+        <a href="index.html" class="nav-link">Cursos</a>
+        <a href="servicios.html" class="nav-link">Servicios</a>
+        <a href="agendar-sesion.html" class="nav-link">Agendar Sesión</a>
         <a href="contacto.html" class="nav-link">Contacto</a>
       </nav>
       <div class="header-actions">
@@ -33,6 +34,7 @@
       </button>
     </div>
   </header>
+  <div class="slogan-band"><p class="container">“No hay una fórmula mágica para el éxito, pero sí hay un solo camino que te llevará a él: la capacitación y la acción constante”</p></div>
 
   <main>
     <section class="page-hero">
@@ -45,10 +47,42 @@
     <section class="about-grid-section">
       <div class="container about-grid">
         <img src="assets/images/capacitaciones/grupo-asnt-ndt-nivel-ii.jpg" alt="Generación del curso ASNT NDT Nivel II de Grupo ABAN" class="about-image" loading="lazy">
-        <div class="about-copy">
-          <h2>Quiénes somos</h2>
-          <p>Somos un equipo mexicano especializado en el sector aeronáutico, con presencia en Ciudad del Carmen, Campeche. Trabajamos junto a talleres de mantenimiento, aerolíneas y autoridades para que cada proceso cumpla con la normativa vigente, sin perder de vista la formación continua del personal técnico.</p>
-          <p>Combinamos experiencia de campo con una plataforma virtual propia, para que aprender o resolver un trámite no dependa de horarios fijos ni de traslados.</p>
+        <div class="about-copy tabs" data-tabs>
+          <div class="tab-list" role="tablist" aria-label="Acerca de Grupo ABAN">
+            <button type="button" class="tab" role="tab" id="tab-quienes" aria-controls="panel-quienes" aria-selected="true">Quiénes Somos</button>
+            <button type="button" class="tab" role="tab" id="tab-vision" aria-controls="panel-vision" aria-selected="false" tabindex="-1">Visión</button>
+            <button type="button" class="tab" role="tab" id="tab-mision" aria-controls="panel-mision" aria-selected="false" tabindex="-1">Misión</button>
+            <button type="button" class="tab" role="tab" id="tab-valores" aria-controls="panel-valores" aria-selected="false" tabindex="-1">Valores</button>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-quienes" aria-labelledby="tab-quienes" tabindex="0">
+            <p><strong>GRUPO ABAN</strong> surge a partir de las necesidades de capacitación y servicios que la industria aeronáutica requiere para que las empresas cuenten con un personal y equipo altamente calificado que los mantenga siempre a la vanguardia del mercado cotidiano, de una forma eficaz y eficiente dentro de la actividad empresarial.</p>
+            <p><strong>GRUPO ABAN</strong> es una empresa orgullosamente mexicana, la cual está constituida de acuerdo a las Leyes de la República Mexicana de Capacitación y Pruebas no destructivas, entre otras; con personal competente, experto y apto en Metrología, así como instructores expertos en la materia.</p>
+            <p><strong>GRUPO ABAN</strong> está instituido ante Notario Público No. 11 de Ciudad del Carmen, Campeche, el día 04 de abril de 2005, cuenta también con el Reconocimiento Oficial de REG. STPS-RARG-720419-EN4-0005.</p>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-vision" aria-labelledby="tab-vision" tabindex="0">
+            <p><strong>GRUPO ABAN</strong> busca posicionarse como una empresa de alta calidad en la prestación de sus servicios y capacitación para la industria aeronáutica de forma eficiente, permitiendo que nuestros clientes cuenten siempre con un personal y equipo competitivo, que los mantenga siempre a la vanguardia del mercado aeronáutico, a través de la garantía en nuestros servicios y capacitación y con costos muy competitivos.</p>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-mision" aria-labelledby="tab-mision" tabindex="0">
+            <p>Ser la mejor opción para satisfacer las necesidades de la industria aeronáutica a través de la prestación de nuestros servicios y capacitación con la máxima garantía, seguridad y calidad, de ofrecer a nuestros clientes las mejores condiciones para su desarrollo laboral en respuesta a las necesidades de la industria aeronáutica.</p>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-valores" aria-labelledby="tab-valores" tabindex="0">
+            <p><strong>GRUPO ABAN</strong> está instituido sobre grandes pilares a través de nuestros valores:</p>
+            <ul class="values-list">
+              <li><b>G</b>ratitud, por preferirnos, lo que nos impulsa a brindarle nuestros servicios con la mejor calidad.</li>
+              <li><b>R</b>esponsabilidad, brindándole siempre nuestros servicios con el mejor profesionalismo.</li>
+              <li><b>U</b>nidad que nos da sustento, fuerza y valor para lograr que lo imposible se haga posible.</li>
+              <li><b>P</b>erseverancia para alcanzar lo propuesto y buscar soluciones a las dificultades que puedan surgir.</li>
+              <li><b>O</b>riginalidad y creatividad en nuestro trabajo, para ofrecer siempre un servicio garantizado.</li>
+              <li class="values-gap"><b>A</b>ctitud positiva en toda nuestra labor para alcanzar nuestra Visión como empresa.</li>
+              <li><b>B</b>ienestar y seguridad en cada uno de nuestros servicios prestados para su satisfacción.</li>
+              <li><b>A</b>prendizaje y superación personal que nos impulse continuamente a ser mejores.</li>
+              <li><b>N</b>ormatividad y ética en nuestra labor nos permitirá una mejor convivencia empresarial.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -150,6 +184,7 @@
       <div class="footer-col">
         <h4>Enlaces Rápidos</h4>
         <a href="index.html">Cursos</a>
+        <a href="servicios.html">Servicios</a>
         <a href="https://cursos.grupoaban.net">Moodle (cursos.grupoaban.net)</a>
         <a href="agendar-sesion.html">Agendar Sesión</a>
         <a href="nosotros.html">Nosotros</a>
